@@ -1,6 +1,6 @@
 "use client";
 
-export default function home(){
+export default function PokemonPage(){
     return(
         <div>
             <h1>Pokemon List</h1>
