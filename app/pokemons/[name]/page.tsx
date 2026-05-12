@@ -11,6 +11,38 @@ export default async function PokemonDetailsPage({ params }: { params: { name: s
     return (
         <div>
             <h1>{pokemon.name}</h1>
+
+            
+        <div style={{ display: "flex", gap: "20px" }}>
+        
+        <Image
+          src={pokemon.sprites.front_default}
+          alt={`${pokemon.name} front`}
+          width={150}
+          height={150}
+        />
+
+        <Image
+          src={pokemon.sprites.back_default}
+          alt={`${pokemon.name} back`}
+          width={150}
+          height={150}
+        />
+
+        <Image
+          src={pokemon.sprites.front_shiny}
+          alt={`${pokemon.name} shiny`}
+          width={150}
+          height={150}
+        />
+
+        <Image
+            src={pokemon.sprites.back_shiny}
+            alt={`${pokemon.name} shiny back`}
+            width={150}
+            height={150}
+            />
+      </div>
             
         </div>
     )
