@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default async function PokemonDetailsPage({ params }: { params: { name: string } }) {
-    const { name } = params
+    const { name } = await params
 
     {/* fetching individual stats for pokemons */}
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
@@ -10,6 +10,7 @@ export default async function PokemonDetailsPage({ params }: { params: { name: s
 
     return (
         <div>
+            <h1>{pokemon.name}</h1>
             
         </div>
     )
