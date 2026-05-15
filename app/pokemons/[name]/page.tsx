@@ -1,11 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from "next/navigation"
 
 export default async function PokemonDetailsPage({ params }: { params: { name: string } }) {
     const { name } = await params
 
     {/* fetching individual stats for pokemons */}
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+
+    if (!response.ok) {
+      notFound();
+    }
+
     const pokemon = await response.json()
 
     return (
