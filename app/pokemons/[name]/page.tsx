@@ -65,7 +65,7 @@ export default async function PokemonDetailsPage({ params }: { params: { name: s
 
         {pokemon.stats.map((stat: any) => (
           <p key={stat.stat.name}>
-            {stat.stat.name}: {stat.base_stat}
+            {stat.stat.name}: {stat.base_stat}ad
           </p>
         ))}
       </div>
