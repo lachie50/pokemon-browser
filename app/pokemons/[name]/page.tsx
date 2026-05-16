@@ -49,6 +49,26 @@ export default async function PokemonDetailsPage({ params }: { params: { name: s
             height={150}
             />
       </div>
+
+      <div>
+        <h2>Types</h2>
+
+        {pokemon.types.map((type: any) => (
+          <p key={type.type.name}>
+            {type.type.name}
+          </p>
+        ))}
+      </div>
+
+      <div>
+        <h2>Base Stats</h2>
+
+        {pokemon.stats.map((stat: any) => (
+          <p key={stat.stat.name}>
+            {stat.stat.name}: {stat.base_stat}
+          </p>
+        ))}
+      </div>
             
         </div>
     )
