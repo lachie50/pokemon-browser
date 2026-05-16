@@ -32,10 +32,14 @@ export default function RootLayout({
 
         {/* setup shared layout */}
 
-        <nav>
-          <h1>Navbar</h1>
-          <Link href="/">Home</Link>
-          <Link href="/pokemons">Pokemons</Link>
+        <nav className="bg-red-600 text-white px-4 py-3 flex gap-4 items-center">
+          <h1 className="font-bold text-lg">PokeBrowser</h1>
+          
+          <div className="ml-auto flex gap-4">
+              <Link href="/" className="hover:underline">Home</Link>
+              <Link href="/pokemons" className="hover:underline ">Pokemons</Link>
+          </div>
+
         </nav>
         <main>{children}</main>
       </body>
