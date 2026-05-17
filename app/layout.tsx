@@ -30,7 +30,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
 
-        {/* setup shared layout */}
+        {/* setup shared layout and nav */}
+
 
         <nav className="bg-red-600 text-white px-4 py-3 flex gap-4 items-center">
           <h1 className="font-bold text-lg">PokeBrowser</h1>

@@ -1,27 +1,36 @@
+// Import the next.js image component
 import Image from 'next/image';
-import Link from 'next/link';
+// import notFound so i can use 404 errors if pokmon isnt found
 import { notFound } from "next/navigation"
 
+// async = able to use await in function
+// recieving params from the url
 export default async function PokemonDetailsPage({ params }: { params: { name: string } }) {
+    
+    //extracting pokemon name from url params
     const { name } = await params
 
-    {/* fetching individual stats for pokemons */}
+    // fetch pokemon data from api, fetch() sends a request from api
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
 
+    //checks if request succeeded, if not show the 404 errorr
     if (!response.ok) {
       notFound();
     }
 
+    //convert response into json
     const pokemon = await response.json()
 
     return (
+        //container to center everything horizontally
         <div className="min-h-[80vh] px-4 py-10 flex flex-col items-center">
-
+          
           <h1 className="text-4xl font-bold text-black-600 capitalize mb-8">{pokemon.name}</h1>
 
-            
+        
         <div className="flex gap-6 mb-10">
           <div className="text-center">
+            
             <Image
             src={pokemon.sprites.front_default}
             alt={`${pokemon.name} front`}
@@ -84,7 +93,7 @@ export default async function PokemonDetailsPage({ params }: { params: { name: s
             key={stat.stat.name}
             className="capitalize"
           >
-            {stat.stat.name}: {stat.base_stat}ad
+            {stat.stat.name}: {stat.base_stat}
           </p>
         ))}
       </div>   
