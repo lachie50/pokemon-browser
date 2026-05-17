@@ -75,8 +75,11 @@ export default async function PokemonDetailsPage({ params }: { params: { name: s
       <div className="mb-8 text-center">
         <h2 className="text-xl font-semibold mb-2">Types</h2>
 
+        {/* .map() loops through each item in array*/}
         {pokemon.types.map((type: any) => (
+          
           <p 
+            //react needs unique key for lists
             key={type.type.name}
             className="capitalize"
           >
