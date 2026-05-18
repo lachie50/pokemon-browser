@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## My Project: Pokemon-Browser
 
-## Getting Started
+### What i Built
+I built a small Pokemon web app using Next.js and Tailwind CSS, users can search for Pokemon and view pages including data such as sprites, types and base stats using data i fetched from an API. The app includes error handling such as when you search for a pokemon that doesnt exist.
 
-First, run the development server:
+### What i Expected
+I expected Next.js and SvelteKit to be very similar in terms of routing and page structure. I assumed pages would just be files in folders, and navigation would be straight forward 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### What Actually Happened 
+Next.js felt more complex then SvelteKit mainly because of the learning of server components and client components. In SvelteKit reactivity is built into the language but in Next.js I had to think more about when to use "use client". Routing was similar in the way it was filed based, but Next.js was more complex compared to SvelteKits.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### The Hardest Part
+I felt the hardest part for me was knowing when to use "use client" and when I didn't need to. It wasn't obvious at first knowing why some features like hooks or click events required client components while static pages didn't. On my home page I have a button that strictly takes you to the pokemons/page.tsx page. I initially thought I would need "use client" in there due to the button click but ended up finding out i dont.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### What Id Do Differently
+Firstly I would've liked to of made the overall look and interactivity on it better but i didn't want to do too much on my first time using Next.js. On my homepage i would use next/link from the beginning on the <a> to avoid unnecessary page reloads
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### One Sentence Verdict
+I enjoyed using Next.js and i think its a very good full stack framework, although it seemed more complex then SvelteKit which was easier for me to learn.
